@@ -192,28 +192,18 @@ main {
           transition: transform 0.3s ease-out;
 }
 
-.navdrawer-container h4,
-.navdrawer-container ul li a {
+.navdrawer-container h4 {
   height: auto;
   /** CUSTOM: Changed padding from 17px to 19px, see below for @media **/
-  padding: 19px 20px;
-  line-height: 1.4;
-}
-
-/** CUSTOM: Added this to resolve navdrawer issue **/
-@media only screen and (min-width: 800px) {
-  .navdrawer-container h4,
-  .navdrawer-container ul li a {
-    padding: 15px 20px;
-  }
-}
-
-.navdrawer-container h4 {
+  padding: 14px 20px;
+  line-height: 1.6250em;
+  font-weight: 500;
   background-color:#eee;
   color: #333333;
   position: absolute;
   z-index: 2;
   width: 200px;
+  font-size: 20px;
 }
 
 .navdrawer-container ul {
@@ -222,15 +212,23 @@ main {
   list-style-type: none;
   font-weight: 300;
   position: absolute;
+  top: 60px;
+  bottom: 60px;
+  width: 200px;
+  overflow: overlay;
 }
 
 .navdrawer-container ul li a {
+  /** CUSTOM: Changed padding from 17px to 16px, see below for @media **/
+  padding: 16px 20px;
+  line-height: 1.4;
   display: block;
   text-decoration: none;
   color: white;
   -webkit-transition: background-color 0.2s ease-out;
           transition: background-color 0.2s ease-out;
   white-space: nowrap;
+  height: 60px;
 }
 
 .navdrawer-container ul li {
@@ -412,8 +410,6 @@ a:visited {
   color: inherit;
 }
 
-
-
 .nav-header {
   position: fixed;
   height: 60px;
@@ -427,14 +423,6 @@ a:visited {
   height: 60px;
   top: 0;
   width: 100%;
-}
-
-#menu-wrap {
-  position: absolute;
-  top: 60px;
-  bottom: 60px;
-  width: 200px;
-  overflow: overlay;
 }
 
 #nav-footer-wrap {
@@ -456,8 +444,6 @@ a:visited {
   border-bottom-style: none;
   font-size: 12px;
 }
-
-
 
 #footer {
   background-color: #333333;
@@ -571,9 +557,22 @@ a:visited {
     padding-bottom: 12px;
   }
 
+  .nav-header {
+    display: none;
+  }
+
+  #nav-header-wrap {
+    display: none;
+  }
+
+  #nav-footer-wrap {
+    display: none;
+  }
+
   #nav-footer {
     display: none;
   }
+
   /** END CUSTOM **/
 
 
@@ -643,6 +642,8 @@ a:visited {
         -ms-flex-direction: row;
             flex-direction: row;
     -webkit-padding-start: 65px;
+    position: inherit;
+    width: 100%;
   }
 
   .navdrawer-container ul li {
