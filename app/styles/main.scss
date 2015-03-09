@@ -63,8 +63,8 @@ body.open {
 
 .app-bar.open,
 .app-bar.open ~ main {
-  -webkit-transform: translate(200px, 0);
-          transform: translate(200px, 0);
+  -webkit-transform: translate(225px, 0);
+          transform: translate(225px, 0);
 }
 
 .app-bar .logo {
@@ -155,12 +155,12 @@ ol {
   position: fixed;
   top: 0;
   left: 0;
-  width: 200px;
+  width: 225px;
   height: 100%;
   z-index: 2;
   color: #fefefe;
-  -webkit-transform: translate(-200px, 0);
-          transform: translate(-200px, 0);
+  -webkit-transform: translate(-225px, 0);
+          transform: translate(-225px, 0);
   overflow-x: hidden;
   background-color: #000000;
 }
@@ -170,7 +170,7 @@ ol {
   position: absolute;
   top: 0;
   left: 0;
-  width: 200px;
+  width: 225px;
   height: 100%;
   background: url("../images/bgs/amptexture.jpg");
   background-size: cover;
@@ -202,7 +202,7 @@ main {
   color: #333333;
   position: absolute;
   z-index: 2;
-  width: 200px;
+  width: 225px;
   font-size: 20px;
 }
 
@@ -214,7 +214,7 @@ main {
   position: absolute;
   top: 60px;
   bottom: 60px;
-  width: 200px;
+  width: 225px;
   overflow: overlay;
 }
 
@@ -436,7 +436,7 @@ a:visited {
   position: fixed;
   bottom: 0;
   background-color: #333333;
-  width: 200px;
+  width: 225px;
   height: 60px;
   padding: 10px 20px;
   border-top-style: solid;
@@ -501,6 +501,13 @@ a:visited {
 /** END CUSTOM **/
 
 
+/** Phones under 450dpi **/
+@media all and (max-width: 450px) {
+  .app-bar .logo {
+    font-size: 1em;
+    margin-left: -50px;
+  }
+}
 
 /** Larger Screens - desktops and tablets **/
 @media all and (min-width: 990px) {
