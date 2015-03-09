@@ -1,0 +1,711 @@
+/*
+ * Web Starter Kit
+ *
+ * Multi-screen layout styles for your page. Brought to you by the
+ * Web Starter Kit team.
+ *
+ */
+@import '_h5bp';
+
+/*
+ * Visual Style Guide styles
+ * Remove if you prefer to use a CSS library, like Bootstrap
+ */
+@import 'components/components';
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  background-color: #fff;
+  box-sizing: border-box;
+  min-height: 100%;
+}
+
+body.open {
+  overflow: hidden;
+}
+
+.app-bar {
+  // display: block;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #333333;
+  overflow: hidden;
+  z-index: 3;
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.app-bar-container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  position: relative;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0 auto;
+}
+
+.app-bar.open,
+.app-bar.open ~ main {
+  -webkit-transform: translate(200px, 0);
+          transform: translate(200px, 0);
+}
+
+.app-bar .logo {
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 1.5em;
+  line-height: 60px;
+  margin: 0 16px;
+  padding: 0;
+  color: #fefefe;
+  float: none;
+  max-width: none;
+  font-weight: 300;
+  text-align: center;
+  font-family: 'Rock Salt', cursive;
+  margin-left: -60px;
+}
+
+.app-bar a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 300;
+}
+
+.app-bar-actions {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  z-index: 2;
+}
+
+.app-bar button {
+  width: 60px;
+  height: 60px;
+  background-image: none;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  display: inline-block;
+  -webkit-transition: background-color 0.2s ease-out;
+          transition: background-color 0.2s ease-out;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.app-bar button img {
+  height: 60px;
+  width: 60px;
+  padding: 18px;
+}
+
+.app-bar button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.app-bar button:focus {
+  outline: 0;
+}
+
+.app-bar button:active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.promote-layer {
+  /*
+  This may promote the layer to a composited
+  layer.
+
+  Replace with will-change when available
+
+  #perfmatters
+  */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.base,
+p,
+ul,
+ol {
+  font-size: 20px;
+}
+
+.navdrawer-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  z-index: 2;
+  color: #fefefe;
+  -webkit-transform: translate(-200px, 0);
+          transform: translate(-200px, 0);
+  overflow-x: hidden;
+  background-color: #000000;
+}
+
+.navdrawer-container:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  background: url("../images/bgs/amptexture.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 0.7;
+}
+
+.navdrawer-container.open {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.app-bar,
+.navdrawer-container.opened,
+main {
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+          transition: transform 0.3s ease-out;
+}
+
+.navdrawer-container h4,
+.navdrawer-container ul li a {
+  height: auto;
+  /** CUSTOM: Changed padding from 17px to 19px, see below for @media **/
+  padding: 19px 20px;
+  line-height: 1.4;
+}
+
+/** CUSTOM: Added this to resolve navdrawer issue **/
+@media only screen and (min-width: 800px) {
+  .navdrawer-container h4,
+  .navdrawer-container ul li a {
+    padding: 15px 20px;
+  }
+}
+
+.navdrawer-container h4 {
+  background-color:#eee;
+  color: #333333;
+  position: absolute;
+  z-index: 2;
+  width: 200px;
+}
+
+.navdrawer-container ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  font-weight: 300;
+  position: absolute;
+}
+
+.navdrawer-container ul li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  -webkit-transition: background-color 0.2s ease-out;
+          transition: background-color 0.2s ease-out;
+  white-space: nowrap;
+}
+
+.navdrawer-container ul li {
+  border-bottom-style: solid;
+  border-width: 1px;
+  border-color: #888888;
+  padding: 0;
+}
+
+.navdrawer-container ul li::before {
+  content: none;
+}
+
+.navdrawer-container ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navdrawer-container ul li a:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+  outline: 0;
+}
+
+.navdrawer-container ul li a:active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+main {
+  margin: 0 auto;
+  min-height: 100%;
+}
+
+
+
+/** CUSTOM STYLES **/
+
+#cover-main {
+  display: none;
+}
+
+.divider-top {
+	height: 60px;
+}
+
+.app-bar.open ~ main > .cover-main {
+  background-color: rgba(0,0,0,0.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#center-div {
+  max-width: 864px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#home, #contact {
+  padding: 40px 16px 40px 16px;
+  position: relative;
+  color: #fefefe;
+  min-height: 350px;
+  background-color: rgba(0,0,0,0.5);
+  text-align: center;
+}
+
+#studio, #management, #career, #artists, #about-us {
+  padding: 40px 16px 40px 16px;
+  position: relative;
+  color: #fefefe;
+  min-height: 250px;
+  background-color: rgba(0,0,0,0.5);
+}
+
+#home, #studio, #management, #career, #artists, #about-us {
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+#home:before, #studio:before, #about-us:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#home:before {
+  background: url("../images/bgs/home.jpg");
+}
+
+#studio:before {
+  background: url("../images/bgs/studio.jpg");
+}
+
+#about-us:before {
+  background: url("../images/bgs/amptexture.jpg");
+}
+
+#management:before, #career:before, #artists:before, #contact:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#management:before {
+  background: url("../images/bgs/management.jpg");
+}
+
+#career:before {
+  background: url("../images/bgs/career.jpg");
+}
+
+#artists:before {
+  background: url("../images/bgs/artists.jpg");
+}
+
+#contact:before {
+  background: url("../images/bgs/contact.jpg");
+}
+
+#description {
+  padding: 20px 16px 16px 16px;
+  position: relative;
+  color: #333333;
+  min-height: 450px;
+}
+
+#description, #contact {
+  -webkit-box-shadow: inset 0px -5px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 0px -5px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0px -5px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+#music-note {
+  margin-top: -27px;
+  position: relative;
+  z-index: 1;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 54px;
+}
+
+.divider-music {
+  margin-top: -27px;
+  padding-top: 0px;
+}
+
+.divider-none {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+#redlight {
+  width: 36px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+a:visited {
+  color: inherit;
+}
+
+
+
+.nav-header {
+  position: fixed;
+  height: 60px;
+  top: 0px;
+  width: 100%;
+  z-index: 9999;
+}
+
+#nav-header-wrap {
+  position: fixed;
+  height: 60px;
+  top: 0;
+  width: 100%;
+}
+
+#menu-wrap {
+  position: absolute;
+  top: 60px;
+  bottom: 60px;
+  width: 200px;
+  overflow: overlay;
+}
+
+#nav-footer-wrap {
+  position: fixed;
+  height: 60px;
+  bottom: 0;
+  width: 100%;
+}
+
+#nav-footer {
+  position: fixed;
+  bottom: 0;
+  background-color: #333333;
+  width: 200px;
+  height: 60px;
+  padding: 10px 20px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-bottom-style: none;
+  font-size: 12px;
+}
+
+
+
+#footer {
+  background-color: #333333;
+  padding: 0 1.6250em 1.625em;
+  min-height: 84px;
+  text-align: right;
+  color: #fefefe;
+}
+
+#footer > #center-div > p {
+  font-size: 12px;
+}
+
+/** FACEBOOK BUTTON **/
+.myButton {
+	-webkit-box-shadow:inset 0px 1px 0px 0px #7a8eb9;
+	-moz-box-shadow:inset 0px 1px 0px 0px #7a8eb9;
+	box-shadow:inset 0px 1px 0px 0px #7a8eb9;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #637aad), color-stop(1, #5972a7));
+	background:-moz-linear-gradient(top, #637aad 5%, #5972a7 100%);
+	background:-webkit-linear-gradient(top, #637aad 5%, #5972a7 100%);
+	background:-o-linear-gradient(top, #637aad 5%, #5972a7 100%);
+	background:-ms-linear-gradient(top, #637aad 5%, #5972a7 100%);
+	background:linear-gradient(to bottom, #637aad 5%, #5972a7 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#637aad', endColorstr='#5972a7',GradientType=0);
+	background-color:#637aad;
+	border:1px solid #314179;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Trebuchet MS;
+	font-size:16px;
+	padding:8px 14px;
+	text-decoration:none;
+}
+
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #5972a7), color-stop(1, #637aad));
+	background:-moz-linear-gradient(top, #5972a7 5%, #637aad 100%);
+	background:-webkit-linear-gradient(top, #5972a7 5%, #637aad 100%);
+	background:-o-linear-gradient(top, #5972a7 5%, #637aad 100%);
+	background:-ms-linear-gradient(top, #5972a7 5%, #637aad 100%);
+	background:linear-gradient(to bottom, #5972a7 5%, #637aad 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5972a7', endColorstr='#637aad',GradientType=0);
+	background-color:#5972a7;
+}
+
+.myButton:active {
+	-webkit-box-shadow:inset 0px 2px 0px 0px #7a8eb9;
+  -moz-box-shadow:inset 0px 2px 0px 0px #7a8eb9;
+	box-shadow:inset 0px 2px 0px 0px #7a8eb9;
+}
+/** END FACEBOOK BUTTON **/
+
+/** END CUSTOM **/
+
+
+
+/** Larger Screens - desktops and tablets **/
+@media all and (min-width: 990px) {
+  .app-bar.open,
+  .app-bar.open ~ main {
+    -webkit-transform: translate(0px, 0);
+            transform: translate(0px, 0);
+  }
+
+
+
+  /** CUSTOM STYLES **/
+  .divider-top {
+  	height: 130px;
+  }
+
+  #home, #studio, #management, #career, #artists, #about-us, #contact {
+    padding: 50px 16px 16px 16px;
+    min-height: 350px;
+  }
+
+  #home {
+    min-height: 450px;
+  }
+
+  #description {
+    padding: 20px 16px 16px 16px;
+    min-height: 650px;
+  }
+
+  #music-note {
+    margin-top: -36px;
+    position: relative;
+    z-index: 1;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 72px;
+  }
+
+  .divider-music {
+    margin-top: -116px;
+    padding-top: 80px;
+  }
+
+  .divider-none {
+    margin-top: -80px;
+    padding-top: 80px;
+  }
+
+  #redlight {
+    width: 48px;
+    padding-top: 11px;
+    padding-bottom: 12px;
+  }
+
+  #nav-footer {
+    display: none;
+  }
+  /** END CUSTOM **/
+
+
+
+  .app-bar-container {
+    display: block;
+    height: 72px;
+    max-width: 864px;
+    padding: 0 16px;
+    box-sizing: border-box;
+    background-color: #333333;
+  }
+
+  .app-bar .logo {
+    margin: 0;
+    padding: 0;
+    line-height: 70px;
+    font-size: 2em;
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
+  }
+
+  .app-bar-actions {
+    float: right;
+  }
+
+  .app-bar::after {
+    content: ' ';
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+  }
+
+  button.menu {
+    display: none;
+  }
+
+  .navdrawer-container {
+    width: 100%;
+    height: 60px;
+    margin-top: 72px;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    -webkit-transition: none;
+            transition: none;
+    -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.75);
+  }
+
+  .navdrawer-container:before {
+    width: 100%;
+  }
+
+  .navdrawer-container h4 {
+    display: none;
+  }
+
+  .navdrawer-container ul {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 864px;
+    margin: 0 auto;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-padding-start: 65px;
+  }
+
+  .navdrawer-container ul li {
+    border: none;
+  }
+
+  main {
+    padding-top: 0;
+    min-height: initial;
+    margin-top: 0;
+  }
+
+  body {
+    overflow-y: scroll;
+  }
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 300;
+  src: url(/fonts/RobotoCondensed-Light.eot);
+  src: local('Roboto Condensed Light'), local('RobotoCondensed-Light'), url(/fonts/RobotoCondensed-Light.eot) format('embedded-opentype'), url(/fonts/RobotoCondensed-Light.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/RobotoCondensed-Regular.eot);
+  src: local('Roboto Condensed Regular'), local('RobotoCondensed-Regular'), url(/fonts/RobotoCondensed-Regular.eot) format('embedded-opentype'), url(/fonts/RobotoCondensed-Regular.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 700;
+  src: url(/fonts/RobotoCondensed-Bold.eot);
+  src: local('Roboto Condensed Regular'), local('RobotoCondensed-Bold'), url(/fonts/RobotoCondensed-Bold.eot) format('embedded-opentype'), url(/fonts/RobotoCondensed-Bold.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: italic;
+  font-weight: 300;
+  src: url(/fonts/RobotoCondensed-LightItalic.eot);
+  src: local('Roboto Condensed Light Italic'), local('RobotoCondensed-LightItalic'), url(/fonts/RobotoCondensed-LightItalic.eot) format('embedded-opentype'), url(/fonts/RobotoCondensed-LightItalic.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: italic;
+  font-weight: 400;
+  src: url(/fonts/RobotoCondensed-Italic.eot);
+  src: local('Roboto Condensed Italic'), local('RobotoCondensed-Italic'), url(/fonts/RobotoCondensed-Italic.eot) format('embedded-opentype'), url(/fonts/RobotoCondensed-Italic.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: italic;
+  font-weight: 700;
+  src: url(/fonts/RobotoCondensed-BoldItalic.eot);
+  src: local('Roboto Condensed Bold Italic'), local('RobotoCondensed-BoldItalic'), url(/fonts/RobotoCondensed-BoldItalic.eot) format('embedded-opentype'), url(/fonts/RobotoCondensed-BoldItalic.woff) format('woff');
+}
+
+// END
