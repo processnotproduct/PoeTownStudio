@@ -292,16 +292,16 @@ main {
   padding: 40px 16px;
   position: relative;
   color: #fefefe;
-  min-height: 450px;
+  min-height: 350px;
   background-color: rgba(0,0,0,0.5);
   text-align: center;
 }
 
 #studio, #management, #career, #artists, #about-us {
-  padding: 40px 16px;
+  padding: 20px 16px;
   position: relative;
   color: #fefefe;
-  min-height: 250px;
+  min-height: 200px;
   background-color: rgba(0,0,0,0.5);
 }
 
@@ -369,10 +369,10 @@ main {
 }
 
 #description {
-  padding: 20px 16px 16px 16px;
+  padding: 20px 16px 60px 16px;
   position: relative;
   color: #333333;
-  min-height: 450px;
+  min-height: 300px;
 }
 
 #description, #contact {
@@ -525,18 +525,28 @@ a:visited {
   	height: 130px;
   }
 
-  #home, #studio, #management, #career, #artists, #about-us, #contact {
+  #home, #studio, #management, #career, #artists {
     padding: 50px 16px 16px 16px;
-    min-height: 350px;
+    min-height: 300px;
   }
 
   #home {
     min-height: 500px;
   }
 
+  #about-us {
+    padding: 50px 16px;
+    min-height: 300px;
+  }
+
+  #contact {
+    padding: 50px 16px;
+    min-height: 400px;
+  }
+
   #description {
-    padding: 20px 16px 16px 16px;
-    min-height: 650px;
+    padding: 20px 16px 60px 16px;
+    min-height: 200px;
   }
 
   #music-note {
