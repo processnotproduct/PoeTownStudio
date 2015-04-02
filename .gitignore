@@ -1,6 +1,4 @@
-.DS_Store
 node_modules/*
 .sass-cache/*
 .tmp/*
 npm-debug.log
-BKUP/node_modules/*
