@@ -288,6 +288,10 @@ main {
   margin-right: auto;
 }
 
+#home {
+  margin-bottom: -54px;
+}
+
 #home, #contact {
   padding: 40px 16px;
   position: relative;
@@ -303,6 +307,10 @@ main {
   color: #fefefe;
   min-height: 180px;
   background-color: rgba(0,0,0,0.5);
+}
+
+#studio {
+  margin-top: 30px;
 }
 
 #about-us {
@@ -410,7 +418,7 @@ main {
 }
 
 #music-note {
-  margin-top: -27px;
+  padding-top: 27px;
   position: relative;
   z-index: 1;
   margin-left: auto;
@@ -420,7 +428,7 @@ main {
 }
 
 .divider-music {
-  margin-top: -27px;
+  margin-top: -57px;
   padding-top: 0px;
 }
 
@@ -564,12 +572,12 @@ a:visited {
   }
 
   #about-us {
-    padding: 50px 16px;
+    padding: 40px 16px;
     min-height: 300px;
   }
 
   #contact {
-    padding: 50px 16px;
+    padding: 40px 16px;
     min-height: 400px;
   }
 
