@@ -41,7 +41,7 @@ body.open {
   top: 0;
   left: 0;
   background-color: #333333;
-  overflow: hidden;
+  // overflow: hidden;
   z-index: 3;
   -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.75);
@@ -536,6 +536,19 @@ a:visited {
 }
 /** END FACEBOOK BUTTON **/
 
+.audio_controls {
+  display: block;
+  height: 50px;
+  width: 50px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px #aaaaaa;
+  position: fixed;
+  z-index: 4;
+  top: 35px;
+  right: 2em;
+}
+
 /** END CUSTOM **/
 
 
@@ -657,6 +670,18 @@ a:visited {
 
   #nav-footer {
     display: none;
+  }
+
+  #audio_controls {
+    height: 50px;
+    width: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px #aaaaaa;
+    position: fixed;
+    z-index: 4;
+    top: 47px;
+    right: 4em;
   }
 
   /** END CUSTOM **/

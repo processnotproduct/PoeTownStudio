@@ -1,0 +1,21 @@
+<!DOCTYPE html><html><head><style type=text/css>
+	#audio_controls {
+		height: 50px;
+	  width: 50px;
+	  background: #fff;
+	  border-radius: 50%;
+	  box-shadow: 0 2px 6px #333333;
+	}
+</style></head><body><audio id=audio src=http://upload.wikimedia.org/wikipedia/commons/a/a9/Tromboon-sample.ogg></audio><div id=audio_controls><input id=playpause style="width:60px; outline: none; margin-top: -5px; margin-left: -5px;" onclick=togglePlayPause() type=image src=images/ic_play_circle_fill_48px.svg></div><script type=text/javascript>
+function togglePlayPause() {
+   var playpause = document.getElementById("playpause");
+   if (audio.paused || audio.ended) {
+      playpause.src = src="images/ic_pause_circle_fill_48px.svg";
+      audio.play();
+   }
+   else {
+      playpause.src = src="images/ic_play_circle_fill_48px.svg";
+      audio.pause();
+   }
+}
+</script></body></html>

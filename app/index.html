@@ -44,6 +44,8 @@
   </head>
 
   <body>
+    <audio id="audio" src="http://upload.wikimedia.org/wikipedia/commons/a/a9/Tromboon-sample.ogg"></audio>
+    
     <header class="app-bar promote-layer">
       <div class="app-bar-container">
         <button class="menu"><img src="images/hamburger.svg" alt="Menu"></button>
@@ -51,6 +53,10 @@
         <section class="app-bar-actions">
         <!-- Put App Bar Buttons Here -->
         <!-- e.g <button><i class="icon icon-star"></i></button> -->
+        <div class="audio_controls" id="audio_controls">
+       <input id="playpause" style="width:60px; outline: none; margin-top: -5px; margin-left: -5px;" onclick="togglePlayPause()" type="image" src="images/ic_play_circle_fill_48px.svg">
+       </input>
+    </div>
         </section>
       </div>
     </header>
@@ -238,6 +244,21 @@
     <!-- build:js scripts/main.min.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
+
+    <!-- Script for Audio -->
+    <script type="text/javascript">
+      function togglePlayPause() {
+         var playpause = document.getElementById("playpause");
+         if (audio.paused || audio.ended) {
+            playpause.src = src="images/ic_pause_circle_fill_48px.svg";
+            audio.play();
+         }
+         else {
+            playpause.src = src="images/ic_play_circle_fill_48px.svg";
+            audio.pause();
+         }
+      }
+    </script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
