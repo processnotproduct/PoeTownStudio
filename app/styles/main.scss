@@ -425,6 +425,7 @@ main {
   margin-right: auto;
   display: block;
   width: 54px;
+
 }
 
 .divider-music {
@@ -582,6 +583,11 @@ a:visited {
 
   #home {
     min-height: 500px;
+    margin-bottom: 0;
+  }
+
+  #studio {
+    margin-top: 0;
   }
 
   #about-us {
@@ -634,6 +640,7 @@ a:visited {
     margin-right: auto;
     display: block;
     width: 72px;
+    padding-top: 0;
   }
 
   .divider-music {
