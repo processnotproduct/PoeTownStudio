@@ -368,6 +368,28 @@ main {
   background: url("../images/bgs/contact.jpg");
 }
 
+#artist-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+#artist-circle > a {
+  text-decoration: none;
+  color: #333333;
+}
+
+#artist-circle {
+  margin: 60px auto 0;
+  width: 100%;
+}
+
+#artist-circle > a > img {
+  border-radius: 50%;
+  height: 225px;
+}
+
 #description {
   padding: 20px 16px 60px 16px;
   position: relative;
@@ -542,6 +564,55 @@ a:visited {
   #contact {
     padding: 50px 16px;
     min-height: 400px;
+  }
+
+  #artist-container {
+    position: relative;
+    height: 100%
+    width: 100%;
+    text-align: center;
+  }
+
+  #artist-circle > a {
+    text-decoration: none;
+    color: #333333;
+  }
+
+  #artist-circle {
+    margin: 60px auto 0;
+    width: 100%;
+  }
+
+  #artist-circle > img {
+    border-radius: 50%;
+    height: 270px;
+  }
+
+  #artist-circle > a > img {
+    border-radius: 50%;
+    height: 270px;
+  }
+
+  #artist-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+  }
+
+  #artist-circle > a {
+    text-decoration: none;
+    color: #333333;
+  }
+
+  #artist-circle {
+    margin: 60px auto 0;
+    width: 100%;
+  }
+
+  #artist-circle > a > img {
+    border-radius: 50%;
+    height: 225px;
   }
 
   #description {
